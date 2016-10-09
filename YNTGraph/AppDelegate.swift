@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let array = [1, 2, 3, 4, 5]
+        let a = array.reduce(0, +)
+        let b = array.reduce(0) { (x, y) -> Int in
+            return x > y ? x : y
+        }
+        print("a = \(a), b = \(b)")
         return true
     }
 
